@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Indicadores 3D</title>
+<title>Kennedy · Indicadores en 3D</title>
 <style>
   *{box-sizing:border-box}
   html,body{margin:0;height:100%;background:#000;color:#e8e8e8;font-family:system-ui,Segoe UI,Arial,sans-serif;overflow:hidden}
@@ -172,6 +172,52 @@
     #list,#planWrap,.row,.ctl{grid-column:2;margin-right:env(safe-area-inset-right)}
     #list{grid-template-columns:1fr;padding-top:10px}
   }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500&family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style id="tema-kennedy">
+/* Tema «Kennedy · tercer corte»: misma tipografía y colores que la presentación */
+:root{--k0:#040607;--k1:#080b0d;--k2:#0e1316;--kl:rgba(214,230,236,.12);--kl2:rgba(214,230,236,.22);--kt1:#e8eef0;--kt2:#a7b3b8;--kt3:#6f7c82;--kacc:#ff6b4a;
+  --kmono:"Geist Mono",ui-monospace,monospace;--ktit:"Barlow Condensed","Arial Narrow",sans-serif}
+html,body{background:var(--k0);color:var(--kt1);font-family:"Geist",system-ui,sans-serif;font-weight:300;-webkit-font-smoothing:antialiased}
+#view,#stage,#under,#loading,#sticky{background:var(--k0)!important}
+aside{background:var(--k1);border-right:1px solid var(--kl);padding:22px 20px}
+aside h1,.mtitle{font-family:var(--ktit);font-weight:300;font-size:34px!important;line-height:.95;text-transform:uppercase;letter-spacing:.005em;margin:0 0 18px!important}
+aside h1::before{content:"Kennedy · indicadores";display:block;font:400 10px var(--kmono);letter-spacing:.16em;color:var(--kacc);margin-bottom:10px}
+#loading{font:400 11px var(--kmono);letter-spacing:.14em;text-transform:uppercase;color:var(--kt3)}
+.ind{margin-bottom:6px}
+.ind button{background:transparent;border:1px solid var(--kl);border-radius:0;font-size:13px;color:var(--kt2);padding:10px 12px 10px 22px;transition:border-color .2s,color .2s,background .2s}
+.ind button:hover{border-color:var(--kl2);color:var(--kt1)}
+.ind button.on{background:rgba(255,107,74,.08);border-color:var(--kacc);color:var(--kt1);font-weight:400}
+.gbar{width:6px}
+.code{font:500 11px var(--kmono);color:var(--kacc);min-width:30px;letter-spacing:.04em}
+.yr{border-radius:0;border-color:var(--kl2);font:400 10px var(--kmono);color:var(--kt3)}
+.row button{border-radius:0;border:1px solid var(--kl2);font:400 10.5px var(--kmono);letter-spacing:.08em;text-transform:uppercase;color:var(--kt1);padding:10px 8px;transition:border-color .2s,background .2s}
+.row button:hover{border-color:var(--kacc)}
+.ctl{font-size:12px}
+.ctl label{font:400 10px var(--kmono);letter-spacing:.1em;text-transform:uppercase;color:var(--kt3)!important}
+.ctl label.chk{font:300 13px "Geist",system-ui,sans-serif;letter-spacing:0;text-transform:none;color:var(--kt2)!important}
+.ctl label span{font-family:var(--kmono);color:var(--kt1)}
+.ctl select{border-radius:0;background-color:var(--k2);border-color:var(--kl2);font:300 13px "Geist",system-ui,sans-serif}
+input[type=checkbox]{border-radius:0}
+.seg{border-radius:0;border-color:var(--kl2);background:rgba(4,6,7,.85);backdrop-filter:blur(8px)}
+.seg button{font:400 10.5px var(--kmono);letter-spacing:.1em;text-transform:uppercase;color:var(--kt2);padding:10px 14px}
+.seg button.on{background:var(--kacc);color:var(--k0);font-weight:500}
+.tog{border-radius:0;border-color:var(--kl2);font:400 10.5px var(--kmono);letter-spacing:.1em;text-transform:uppercase;background:rgba(4,6,7,.85)}
+.tog.on{background:var(--kt1);color:var(--k0);font-weight:500}
+.badge{border-radius:0;border-color:var(--kl2);font:500 11px var(--kmono);letter-spacing:.06em;text-transform:uppercase;background:rgba(4,6,7,.88)}
+#under.on,#legend{border-color:var(--kl)!important}
+#legend h3{font:400 10.5px var(--kmono);letter-spacing:.12em;text-transform:uppercase;color:var(--kt1)}
+#legend canvas{border-radius:0;border-color:var(--kl2)}
+#legend .ticks{font:400 10px var(--kmono);color:var(--kt3)}
+#notice{border-radius:0;border-color:var(--kl2);font-size:12px;color:var(--kt2)}
+#plan,#plan img,.pfig img{border-radius:0}
+.pfig figcaption,#plan figcaption{font:400 10px var(--kmono);letter-spacing:.08em;text-transform:uppercase;color:var(--kt3)}
+#hint{font:400 10px var(--kmono);letter-spacing:.08em;text-transform:uppercase;color:var(--kt3)}
+#menuBtn{border-radius:0}
+aside::-webkit-scrollbar-thumb{background:#1c2428;border-color:var(--k1)}
+@media (max-width:820px){#sticky{border-bottom-color:var(--kl)}.mtitle{font-size:24px!important;margin:0!important}}
 </style>
 </head>
 <body>
